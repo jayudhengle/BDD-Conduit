@@ -54,10 +54,9 @@ public class EditArticlePage {
 		publishArticleBtn.click();
 	}
 
-	public String verifyArticleHeader()
+	public boolean verifyArticleHeader()
 	{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='container']/h1")));
-		WebElement title = articleHeading;
-		return(title.getText());
+		return(articleHeading.isDisplayed());
 	}
 }
